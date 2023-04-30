@@ -5,7 +5,8 @@ A very basic python library and utilities for communicating with a Narda Radman 
 The RadMan 2XT has a USB-C port which appears as a ACM-serial device. The commmunications protocol appears to have a similar message structure as some of Narda's other products, e.g. the [NBM-550](https://www.narda-sts.com/en/wideband-emf/nbm-550/nbme-field-3-ghz-high-power/pd/pdfs/23286/eID/). Further, Narda's RadMan2-TS software displays the commands being sent, giving a good idea as to what needs to be sent.
 
 ## Disclaimers
-* This library should not be used for making safety-of-life measurements (at least, not until it's been properly validated!)
+* This library should not be used for making safety-of-life measurements (at least, not until it's been properly validated, and probably not even then!)
+* RadMan units are often only calibrated at a spot frequency, and the measurements are often quite conservative (e.g. higher than actual). This is intentional, as these are meant to be a personal safety product - being conservative in your measurements is a good thing!
 * Conversions from percentages-of-standards to absolute E/H-field measurements are only valid when measuring single-frequency emitters, and if the frequency has been specified correctly.
 * The uncertainty of any results from this library have not been tested. Future work will involve comparing the output of a RadMan 2XT to that of a Narda NBM-550, for both free-space and TEM-cell measurements.
 
